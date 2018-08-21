@@ -16,7 +16,6 @@ const max = function(numbers) {
 }
 
 console.log(max([1,2,0, -5, 15, 2, -3]));
-<<<<<<< HEAD
 
 
 const min = function(numbers) {
@@ -127,12 +126,26 @@ console.log(filter(myNames, (name)=> name[0]==='R'));
 
 
 
+//Functions as Return Values
+const hazardWarningCreator = function(typeOfWarning) {
+  let warningCounter = 0;
+  return (location) => {
+    warningCounter++;
+    console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!`);
+    console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} time(s) today!`);
+  };
+};
 
+const rocksWarning = hazardWarningCreator('Rocks on the Road');
+const floodWarning = hazardWarningCreator('Flood Warning');
+const trafficWarning = hazardWarningCreator('Traffic Warning');
 
+//rocksWarning(location)
+rocksWarning('Main St and Pacific Ave');
+rocksWarning('Job Street');
 
-
-
-
+floodWarning('Downtown');
+trafficWarning('All of the Bay Area');
 
 
 
@@ -141,5 +154,3 @@ console.log(filter(myNames, (name)=> name[0]==='R'));
 
 
 //
-=======
->>>>>>> a8a15c07c05c44d216cdc2669b010291cf83f65d
