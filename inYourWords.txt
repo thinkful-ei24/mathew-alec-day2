@@ -1,1 +1,18 @@
 This is the "In Your Own Words Exercise"
+1. What is scope? 
+  -Global is when the entire file has access to a variable. This could mean other files as well could see it. The local scope is only within that block or function. 
+2. Why are global variables avoided?
+  -Side effects and hard to debug
+3. Explain JS's strict mode.
+  -Requires all variables to be declared. 
+
+'use strict';
+
+function () {
+  variable = 2; //error
+
+}
+
+4. What are side effects, and what is a pure function?
+  -When a variable is reassigned to a value that you don't expect or want. 
+  -A pure function doesn't create side effects. 
