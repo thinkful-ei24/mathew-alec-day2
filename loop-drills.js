@@ -147,10 +147,44 @@ rocksWarning('Job Street');
 floodWarning('Downtown');
 trafficWarning('All of the Bay Area');
 
+/////////////////////////////////
+/////////////////////////////////
 
+const turtle = function(turtleSteps){
+  let newArr = [];
+  const noNegatives = turtleSteps.filter(values => values[0] > -1 && values[1] > -1);
+  console.log(noNegatives);
+  const sums = noNegatives.map(values => values[0] + values[1]);
+  sums.forEach(value => console.log(`the turtle took ${value} steps`));
+  return sums;
+}
+console.log(turtle([[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]]));
+//create a decoded str
+//if it is 3 characters in lenght add a space
+//else capitalize the last element and add it
+const lastProblem = function(sentence){
+  const arr = sentence.split(" ");
+  const reduction = arr.reduce((newStr, value)=>{
+    if(value.length === 3){
+      newStr+=' ';
+    } else {
+      const upperCase = value[value.length-1];
+      newStr += upperCase.toUpperCase();
+    }
+    return newStr;
+  }, '');
+  return reduction;
+}
 
+console.log(lastProblem('noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest'));
 
-
-
-
+// EXAMPLE WE USED
+// const euro = [29.76, 41.85, 46.5];
+// const above30 = euro.reduce((total, amount) => {
+//   if (amount > 30) {
+//     total.push(amount);
+//   }
+//   return total;
+// }, []);
 //
+// above30 // [ 41.85, 46.5 ]
