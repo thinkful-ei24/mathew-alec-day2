@@ -16,6 +16,7 @@ const max = function(numbers) {
 }
 
 console.log(max([1,2,0, -5, 15, 2, -3]));
+<<<<<<< HEAD
 
 
 const min = function(numbers) {
@@ -140,3 +141,5 @@ console.log(filter(myNames, (name)=> name[0]==='R'));
 
 
 //
+=======
+>>>>>>> a8a15c07c05c44d216cdc2669b010291cf83f65d
